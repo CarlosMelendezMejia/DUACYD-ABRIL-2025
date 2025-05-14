@@ -1,0 +1,358 @@
+:root {
+    --primary-color: #583fc8;
+    --secondary-color: #ffffff;
+    --tertiary-color: #3e28a1;
+    --quaternary-color: #a08ef1;
+    --important-color: #ffba31;
+}
+
+* {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.custom-text-important {
+    color: var(--important-color) !important;
+}
+
+.custom-btn-color {
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+.custom-btn-color:hover {
+    background-color: var(--tertiary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    height: 90px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar {
+    padding: 15px 0;
+    background-color: var(--primary-color);
+    height: 8rem !important;
+}
+
+.nav-link {
+    color: var(--secondary-color) !important;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--important-color) !important;
+    transform: translateY(-2px);
+}
+
+.navbar-toggler {
+    border: 2px solid var(--secondary-color);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.footer-carbon {
+    background-color: #333333;
+    /* Color carbón */
+    color: #ffffff;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f8f9fa;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #adb5bd;
+}
+
+/* Ajustes para el menú colapsado */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: var(--primary-color);
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+
+    .logo {
+        height: 70px;
+    }
+
+    .navbar {
+        height: auto !important;
+        padding-bottom: 1rem;
+    }
+}
+
+/* Asegurar que el contenido no quede detrás del navbar */
+body {
+    padding-top: 8rem;
+}
+
+.carousel-caption {
+    bottom: 15%;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+}
+
+.comp-1-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.comp-1-container {
+    display: flex;
+    padding: 20px;
+    margin: 30px auto;
+    width: 95%;
+    max-width: 1200px;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.comp-1-box {
+    height: 300px;
+    background-color: #fff;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    will-change: transform, opacity;
+}
+
+#comp-1-box1 {
+    background-color: #79c793;
+}
+
+#comp-1-box2 {
+    background-color: #19BB98;
+}
+
+#comp-1-box3 {
+    background-color: #4DA8DA;
+}
+
+.comp-1-box.comp-1-active,
+.comp-1-box:hover {
+    flex: 3;
+    height: auto;
+    min-height: 300px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.comp-1-logo-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.comp-1-texto {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.4s ease;
+    padding: 20px;
+    width: 100%;
+    color: #ffffff;
+    transform: translateY(20px);
+}
+
+.comp-1-titulo {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.comp-1-descripcion {
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.comp-1-box.comp-1-active .comp-1-logo-img,
+.comp-1-box:hover .comp-1-logo-img {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.comp-1-box.comp-1-active .comp-1-texto,
+.comp-1-box:hover .comp-1-texto {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+/* Media queries con prefijo */
+@media (min-width: 768px) {
+    .comp-1-container {
+        flex-direction: row;
+        padding: 30px;
+        margin: 50px auto;
+        gap: 15px;
+    }
+
+    .comp-1-box {
+        height: 400px;
+    }
+
+    .comp-1-logo-img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .comp-1-texto {
+        padding: 30px;
+    }
+
+    .comp-1-titulo {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .comp-1-descripcion {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .comp-1-box {
+        height: 250px;
+    }
+
+    .comp-1-logo-img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.comp-2-duacyd-component {
+    position: relative;
+    margin-top: 56px;
+    /* Para compensar el navbar fixed */
+}
+
+.comp-2-parallax-hero {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('resources/banner_duacyd_alt.JPG');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.comp-2-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.comp-2-hero-title {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+    margin: 0 auto;
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.comp-2-content-section {
+    position: relative;
+    background-color: #f8f9fa;
+    padding: 5rem 0;
+}
+
+.comp-2-content-wrapper {
+    padding: 2rem;
+}
+
+.comp-2-lead {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.comp-2-content-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.comp-2-separator {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    margin: 1.5rem auto;
+}
+
+@media (max-width: 768px) {
+    .comp-2-parallax-hero {
+        background-attachment: scroll !important;
+    }
+
+    .comp-2-hero-title {
+        font-size: 2.2rem;
+        padding: 0 1rem;
+    }
+
+    .comp-2-content-wrapper {
+        padding: 1.5rem 0;
+    }
+
+    .comp-2-lead {
+        font-size: 1.1rem;
+    }
+}

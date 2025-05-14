@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUACyD</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilo_landing_page.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+            <div class="container">
+                <div class="logo-container d-flex align-items-center gap-4 me-4">
+                    <a class="navbar-brand" href="https://www.unam.mx/">
+                        <img src="resources/unam_blanco.png" alt="Logo UNAM" class="logo">
+                    </a>
+                    <a class="navbar-brand" href="https://www.aragon.unam.mx/fes-aragon/#!/inicio">
+                        <img src="resources/fesaragon-blanco.png" alt="Logo FES Aragón" class="logo">
+                    </a>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="resources/DUACyD_B-09.png" alt="Logo DUACyD" class="logo">
+                    </a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                    <ul class="navbar-nav gap-lg-3">
+                        <li class="nav-item">
+                            <a class="nav-link active px-3 py-2 rounded" href="index.html">
+                                <i class="bi bi-house-door me-2"></i>Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 py-2 rounded" href="acerca-de.html">
+                                <i class="bi bi-info-circle me-2"></i>Acerca de
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 py-2 rounded" href="oferta-educativa.html">
+                                <i class="bi bi-book me-2"></i>Oferta Educativa
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 py-2 rounded" href="estadisticas.html">
+                                <i class="bi bi-bar-chart me-2"></i>Estadísticas
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 py-2 rounded" href="contacto.html">
+                                <i class="bi bi-envelope me-2"></i>Contacto
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 py-2 rounded" href="preguntas-frecuentes.html">
+                                <i class="bi bi-question-circle me-2"></i>Preguntas Frecuentes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner con listón inferior -->
+    <section class="banner mt-0">
+        <div class="container-fluid p-0 position-relative">
+            <img src="resources/banner_duacyd.JPG" alt="Banner placeholder" class="img-fluid w-100"
+                style="max-height: 500px; object-fit: cover;">
+
+            <div class="custom-text-1 position-absolute bottom-0 start-0 w-100 p-4"
+                style="background-color: #3e28a191;">
+                <div class="container text-white">
+                    <h1 class="fw-bold" style="color: var(--important-color);">DUACyD - FES Aragón</h1>
+                    <h3>División de Universidad Abierta, Continua y a Distancia</h3>
+                    <h4>Explora nuestra oferta educativa flexible y de calidad</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Avisos y Novedades -->
+    <section class="mt-5 mb-5">
+        <div class="container">
+            <h2 class="text-center mb-4" style="color: var(--primary-color); font-weight: 600;">Avisos y Novedades</h2>
+            <div id="avisosCarrusel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded shadow">
+                    <div class="carousel-item active">
+                        <img src="https://placehold.co/1200x400?text=Aviso+1" class="d-block w-100" alt="Aviso 1">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+                            <h5 class="text-white">Nuevo curso disponible</h5>
+                            <p class="text-white-50">Inscríbete al curso de Metodologías Activas antes del 15 de mayo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x400?text=Aviso+2" class="d-block w-100" alt="Aviso 2">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+                            <h5 class="text-white">Actualización en el calendario</h5>
+                            <p class="text-white-50">Consulta las nuevas fechas para los diplomados de verano.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x400?text=Aviso+3" class="d-block w-100" alt="Aviso 3">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+                            <h5 class="text-white">Convocatoria abierta</h5>
+                            <p class="text-white-50">Participa en el seminario de innovación educativa 2025.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#avisosCarrusel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#avisosCarrusel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="comp-2-duacyd-component">
+        <!-- Sección Hero con efecto Parallax -->
+        <div class="comp-2-parallax-hero">
+            <div class="comp-2-hero-overlay"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <h1 class="comp-2-hero-title custom-text-important mb-4">¿Qué es la DUACyD?</h1>
+                        <!-- <a href="#comp-2-duacyd-content" class="btn btn-outline-light btn-lg px-4 py-2">
+                            Saber más <i class="bi bi-chevron-down ms-2"></i>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Contenido -->
+        <div id="comp-2-duacyd-content" class="comp-2-content-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-xl-8">
+                        <div class="comp-2-content-wrapper">
+                            <p class="comp-2-lead mb-4" style="text-align: justify;">
+                                La División de Universidad Abierta, Continua y a Distancia (DUACyD) de la Facultad de
+                                Estudios Superiores Aragón es el área encargada de coordinar y promover modalidades
+                                educativas flexibles que
+                                respondan a las necesidades de formación de distintos sectores de la sociedad.
+                            </p>
+
+                            <div class="comp-2-separator"></div>
+
+                            <p class="comp-2-content-text mb-0" style="text-align: justify;">
+                                Su objetivo principal es ampliar las oportunidades de acceso, actualización y
+                                profesionalización a través de programas académicos de calidad,
+                                innovadores y accesibles.
+                            </p>
+
+                            <div class="text-center mt-5">
+                                <a href="#" class="btn btn-primary btn-lg custom-btn-color px-4">
+                                    Conócenos más <i class="bi bi-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: var(--tertiary-color); padding-top: 3rem; padding-bottom: 1rem;">
+        <div class="container">
+            <h2 class="text-center mb-4" style="color: var(--important-color); font-weight: 600;">Conoce las diversas
+                áreas de
+                la DUACyD</h2>
+            </h2>
+            <p class="text-center mb-4 text-white">Explora nuestras diversas áreas y descubre cómo podemos ayudarte a
+                alcanzar tus metas educativas.</p>
+        </div>
+        <div class="comp-1-container">
+            <div class="comp-1-box" id="comp-1-box1">
+                <img src="resources/SUAYED_Blanco-06.png"
+                    alt="Logo SUAyED - Sistema Universidad Abierta y Educación a Distancia" class="comp-1-logo-img">
+                <div class="comp-1-texto">
+                    <h3 class="comp-1-titulo">Sistema Universidad Abierta y Educación a Distancia (SUAyED)</h3>
+                    <p class="comp-1-descripcion">El SUAyED de la FES Aragón ofrece programas académicos de licenciatura
+                        que combinan la flexibilidad del estudio independiente con el acompañamiento académico. Está
+                        diseñado para personas que requieren compatibilizar sus estudios con otras actividades,
+                        permitiendo avanzar en su formación profesional a través de modalidades semipresenciales y a
+                        distancia con el respaldo de la UNAM.</p>
+                </div>
+            </div>
+
+            <div class="comp-1-box" id="comp-1-box2">
+                <img src="resources/CLE_B-09.png" alt="Logo CLE - Centro de Lenguas Extranjeras"
+                    class="comp-1-logo-img">
+                <div class="comp-1-texto">
+                    <h3 class="comp-1-titulo">Centro de Lenguas Extranjeras</h3>
+                    <p class="comp-1-descripcion">El Centro de Lenguas de la FES Aragón promueve el aprendizaje de
+                        idiomas como herramienta de desarrollo académico, profesional y cultural. Ofrece cursos en
+                        distintos niveles de inglés, francés, alemán, italiano, náhuatl y otros idiomas, impartidos por
+                        docentes especializados y con metodologías actualizadas que favorecen la competencia
+                        comunicativa.</p>
+                </div>
+            </div>
+
+            <div class="comp-1-box" id="comp-1-box3">
+                <img src="resources/Educación Continua_Blanco-07.png" alt="Logo Educación Continua - FES Aragón"
+                    class="comp-1-logo-img">
+                <div class="comp-1-texto">
+                    <h3 class="comp-1-titulo">Educación Continua</h3>
+                    <p class="comp-1-descripcion">La Educación Continua en la FES Aragón brinda una oferta diversa de
+                        cursos, talleres y diplomados dirigidos a la comunidad universitaria y al público en general. Su
+                        objetivo es fomentar la actualización profesional, el desarrollo de habilidades y la formación
+                        permanente en distintas áreas del conocimiento, mediante programas de calidad con enfoque
+                        práctico e innovador.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-carbon py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>DUACyD FES Aragón</h5>
+                    <p>División de Universidad Abierta, Continua y a Distancia</p>
+                    <p>Facultad de Estudios Superiores Aragón</p>
+                    <p>Universidad Nacional Autónoma de México</p>
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><i class="bi bi-geo-alt-fill me-2"></i> Av. Rancho Seco S/N, Col. Impulsora, Nezahualcóyotl,
+                            Estado de México</li>
+                        <li><i class="bi bi-telephone-fill me-2"></i> Teléfono: 55 5623 0000</li>
+                        <li><i class="bi bi-envelope-fill me-2"></i> Email: duacyd@aragon.unam.mx</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <div class="social-icons mb-3">
+                        <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="bi bi-youtube"></i></a>
+                    </div>
+                    <img src="https://www.aragon.unam.mx/fes-aragon-theme/images/logo-unam.svg" alt="Logo UNAM"
+                        style="height: 60px;" class="me-3">
+                    <img src="https://www.aragon.unam.mx/fes-aragon-theme/images/logo-fes.svg" alt="Logo FES Aragón"
+                        style="height: 60px;">
+                </div>
+            </div>
+
+            <hr class="my-4 bg-light">
+
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 DUACyD FES Aragón - UNAM. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="footer-links">Aviso de Privacidad</a></li>
+                        <li class="list-inline-item"><span class="mx-2">|</span></li>
+                        <li class="list-inline-item"><a href="#" class="footer-links">Términos de Uso</a></li>
+                        <li class="list-inline-item"><span class="mx-2">|</span></li>
+                        <li class="list-inline-item"><a href="creditos.html" class="footer-links">Créditos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contenido principal -->
+
+    <script>
+        // JavaScript con selectores actualizados
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.querySelector('.comp-1-container');
+            if (!container) return;
+
+            const boxes = container.querySelectorAll('.comp-1-box');
+
+            // Verificar si es un dispositivo táctil
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
+
+            if (isTouchDevice) {
+                boxes.forEach(box => {
+                    box.addEventListener('click', function (e) {
+                        e.stopPropagation();
+
+                        // Cerrar cualquier caja abierta primero
+                        boxes.forEach(b => {
+                            if (b !== box && b.classList.contains('comp-1-active')) {
+                                b.classList.remove('comp-1-active');
+                            }
+                        });
+
+                        // Alternar la clase active en la caja clickeada
+                        box.classList.toggle('comp-1-active');
+                    });
+                });
+
+                // Cerrar al hacer click fuera de las cajas
+                document.addEventListener('click', function () {
+                    boxes.forEach(box => {
+                        box.classList.remove('comp-1-active');
+                    });
+                });
+            }
+        });
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+</body>
+
+</html>
