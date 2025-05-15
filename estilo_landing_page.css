@@ -50,7 +50,7 @@
 
 .nav-link {
     color: var(--secondary-color) !important;
-    font-size: 1.1rem;
+    font-size: 0.84rem;
     padding: 0.5rem 1rem !important;
     transition: all 0.3s ease;
 }
