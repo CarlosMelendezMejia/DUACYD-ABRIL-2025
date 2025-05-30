@@ -18,6 +18,10 @@
     font-style: normal;
 }
 
+.custom-text-primary {
+    color: var(--primary-color);
+}
+
 .custom-text-important {
     color: var(--important-color) !important;
 }
