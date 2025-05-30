@@ -178,7 +178,7 @@ body {
 }
 
 #comp-1-box1 {
-    background-color: #79c793;
+    background-color: #48b76d;
 }
 
 #comp-1-box2 {
@@ -650,4 +650,21 @@ body {
     .timeline-text p {
         font-size: 1rem;
     }
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all var(--transition-time);
+}
+
+.btn-primary:hover {
+    background-color: var(--tertiary-color);
+    border-color: var(--tertiary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--shadow-color) !important;
+}
+
+.rounded {
+    border-radius: var(--border-radius) !important;
 }
