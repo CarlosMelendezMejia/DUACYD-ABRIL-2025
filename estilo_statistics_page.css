@@ -1,0 +1,192 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-color);
+}
+
+.section-title {
+    border-left: 5px solid var(--primary-color);
+    padding-left: 15px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: var(--tertiary-color);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+.stat-card {
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: transform var(--transition-time) ease;
+    height: 100%;
+    border: none;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--light-color) 100%);
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(88, 63, 200, 0.2);
+}
+
+.stat-card .card-body {
+    padding: 1.8rem;
+    position: relative;
+}
+
+.stat-card .card-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--subprimary-color) 100%);
+}
+
+.stat-number {
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--subprimary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--tertiary-color);
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.chart-container {
+    background: var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    padding: 25px;
+    margin-bottom: 35px;
+    border: 1px solid rgba(88, 63, 200, 0.1);
+}
+
+.chart-container h5 {
+    color: var(--tertiary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chart {
+    width: 100%;
+    min-height: 400px;
+}
+
+.testimonial-card {
+    border-left: 4px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    transition: all var(--transition-time) ease;
+}
+
+.testimonial-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(88, 63, 200, 0.15);
+}
+
+.impact-fact {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.impact-icon {
+    font-size: 1.8rem;
+    margin-right: 20px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--subprimary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.impact-fact h5 {
+    color: var(--tertiary-color);
+    font-weight: 600;
+}
+
+.impact-fact p {
+    color: #555;
+    margin-bottom: 0;
+}
+
+.modalidad-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.badge-continua {
+    background-color: rgba(88, 63, 200, 0.1);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.badge-lenguas {
+    background-color: rgba(255, 186, 49, 0.1);
+    color: #d39e00;
+    border: 1px solid var(--important-color);
+}
+
+.badge-abierta {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+.progress {
+    height: 25px;
+    border-radius: 12px;
+    background-color: var(--light-color);
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+    font-weight: 500;
+}
+
+.blockquote-footer {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.alert-info {
+    background-color: rgba(88, 63, 200, 0.1);
+    border-color: rgba(88, 63, 200, 0.2);
+    color: var(--tertiary-color);
+}
+
+@media (max-width: 768px) {
+    .stat-number {
+        font-size: 2.2rem;
+    }
+
+    .chart {
+        min-height: 300px;
+    }
+
+    .impact-fact {
+        flex-direction: column;
+    }
+
+    .impact-icon {
+        margin-bottom: 10px;
+    }
+}

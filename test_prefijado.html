@@ -1,133 +1,266 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DUACyD</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="estilo_landing_page.css">
-    <link rel="stylesheet" href="estilo_statistics_page.css">
-    <style>
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.stat-0">
+  <title>Estadísticas DUACyD | División de Universidad Abierta</title>
+  <link href="https://cdn.stat-jsdelivr.stat-net/npm/bootstrap@5.stat-3.stat-0/dist/css/bootstrap.stat-min.stat-css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #583fc8;
+      --subprimary-color: #ac5ee8;
+      --secondary-color: #ffffff;
+      --tertiary-color: #3e28a1;
+      --quaternary-color: #a08ef1;
+      --important-color: #ffba31;
+      --accent-color: #e74c3c;
+      --light-color: #ecf0f1;
+      --shadow-color: rgba(0, 0, 0, 0.stat-1);
+      --transition-time: 0.stat-6s;
+      --border-radius: 12px;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-color);
+    }
+    
+    .stat-section-title {
+      border-left: 5px solid var(--primary-color);
+      padding-left: 15px;
+      margin-bottom: 1.stat-5rem;
+      font-weight: 600;
+      color: var(--tertiary-color);
+      text-transform: uppercase;
+      font-size: 1.stat-4rem;
+    }
+    
+    .stat-card {
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 12px var(--shadow-color);
+      transition: transform var(--transition-time) ease;
+      height: 100%;
+      border: none;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--light-color) 100%);
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(88, 63, 200, 0.stat-2);
+    }
+    
+    .stat-card .stat-card-body {
+      padding: 1.stat-8rem;
+      position: relative;
+    }
+    
+    .stat-card .stat-card-body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-color) 0%, var(--subprimary-color) 100%);
+    }
+    
+    .stat-number {
+      font-size: 2.stat-8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--subprimary-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+    }
+    
+    .stat-label {
+      font-size: 1.stat-1rem;
+      color: var(--tertiary-color);
+      font-weight: 500;
+      margin-top: 0.stat-5rem;
+    }
+    
+    .stat-chart-container {
+      background: var(--secondary-color);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 12px var(--shadow-color);
+      padding: 25px;
+      margin-bottom: 35px;
+      border: 1px solid rgba(88, 63, 200, 0.stat-1);
+    }
+    
+    .stat-chart-container h5 {
+      color: var(--tertiary-color);
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .stat-chart {
+      width: 100%;
+      min-height: 400px;
+    }
+    
+    .stat-testimonial-card {
+      border-left: 4px solid var(--primary-color);
+      background-color: var(--secondary-color);
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      box-shadow: 0 2px 8px var(--shadow-color);
+      transition: all var(--transition-time) ease;
+    }
+    
+    .stat-testimonial-card:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 15px rgba(88, 63, 200, 0.stat-15);
+    }
+    
+    .stat-impact-fact {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      background: var(--secondary-color);
+      padding: 20px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 8px var(--shadow-color);
+    }
+    
+    .stat-impact-icon {
+      font-size: 1.stat-8rem;
+      margin-right: 20px;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--subprimary-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .stat-impact-fact h5 {
+      color: var(--tertiary-color);
+      font-weight: 600;
+    }
+    
+    .stat-impact-fact p {
+      color: #555;
+      margin-bottom: 0;
+    }
+    
+    .modalidad-badge {
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.stat-8rem;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    
+    .badge-continua {
+      background-color: rgba(88, 63, 200, 0.stat-1);
+      color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+    }
+    
+    .badge-lenguas {
+      background-color: rgba(255, 186, 49, 0.stat-1);
+      color: #d39e00;
+      border: 1px solid var(--important-color);
+    }
+    
+    .badge-abierta {
+      background-color: rgba(231, 76, 60, 0.stat-1);
+      color: var(--accent-color);
+      border: 1px solid var(--accent-color);
+    }
+    
+    .progress {
+      height: 25px;
+      border-radius: 12px;
+      background-color: var(--light-color);
+    }
+    
+    .progress-bar {
+      background-color: var(--primary-color);
+      font-weight: 500;
+    }
+    
+    .blockquote-footer {
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+    
+    .alert-info {
+      background-color: rgba(88, 63, 200, 0.stat-1);
+      border-color: rgba(88, 63, 200, 0.stat-2);
+      color: var(--tertiary-color);
+    }
+    
+    @media (max-width: 768px) {
+      .stat-number {
+        font-size: 2.stat-2rem;
+      }
+      
+      .stat-chart {
+        min-height: 300px;
+      }
+      
+      .stat-impact-fact {
+        flex-direction: column;
+      }
+      
+      .stat-impact-icon {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
-            <div class="container">
-                <div class="logo-container d-flex align-items-center gap-4 me-4">
-                    <a class="navbar-brand" href="https://www.unam.mx/">
-                        <img src="resources/unam_blanco.png" alt="Logo UNAM" class="logo">
-                    </a>
-                    <a class="navbar-brand" href="https://www.aragon.unam.mx/fes-aragon/#!/inicio">
-                        <img src="resources/fesaragon-blanco.png" alt="Logo FES Aragón" class="logo">
-                    </a>
-                    <a class="navbar-brand" href="index.html">
-                        <img src="resources/DUACyD_B-09.png" alt="Logo DUACyD" class="logo">
-                    </a>
-                </div>
+  <div class="stat-container stat-py-5">
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
-                    <ul class="navbar-nav gap-lg-3">
-                        <li class="nav-item">
-                            <a class="nav-link active px-3 py-2 rounded" href="index.html">
-                                <i class="bi bi-house-door me-2"></i>Inicio
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3 py-2 rounded" href="acerca-de.html">
-                                <i class="bi bi-info-circle me-2"></i>Acerca de
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3 py-2 rounded" href="oferta-educativa.html">
-                                <i class="bi bi-book me-2"></i>Oferta Educativa
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3 py-2 rounded" href="estadisticas.html">
-                                <i class="bi bi-bar-chart me-2"></i>Estadísticas
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3 py-2 rounded" href="contacto.html">
-                                <i class="bi bi-envelope me-2"></i>Contacto
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3 py-2 rounded" href="preguntas-frecuentes.html">
-                                <i class="bi bi-question-circle me-2"></i>Preguntas Frecuentes
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <!-- Encabezado -->
+    <header class="mb-5 text-center">
+      <h1 class="display-4 fw-bold mb-3" style="color: var(--tertiary-color);">Estadísticas DUACyD</h1>
+      <p class="lead" style="color: var(--primary-color);">División de Universidad Abierta, Continua y a Distancia</p>
+      <div class="d-flex justify-content-center flex-wrap">
+        <span class="modalidad-badge badge-continua">Educación Continua</span>
+        <span class="modalidad-badge badge-lenguas">Centro de Lenguas Extranjeras</span>
+        <span class="modalidad-badge badge-abierta">Universidad Abierta</span>
+      </div>
     </header>
 
-    <!-- Banner con listón inferior - Página de Estadísticas -->
-<section class="banner mt-0">
-    <div class="container-fluid p-0 position-relative">
-        <img src="resources/banner_duacyd.JPG" alt="Banner con gráficos estadísticos" class="img-fluid w-100"
-            style="max-height: 500px; object-fit: cover;">
-        <div class="custom-text-1 position-absolute bottom-0 start-0 w-100 p-4"
-            style="background-color: #3e28a191;">
-            <div class="container text-white">
-                <h1 class="fw-bold" style="color: var(--important-color);">Estadísticas DUACyD</h1>
-                <h3>División de Universidad Abierta, Continua y a Distancia</h3>
-                <h4>Datos clave, métricas y resultados de nuestra comunidad educativa</h4>
-            </div>
-        </div>
-    </div>
-</section>
-    
-<section class="mb-5">
-      <h2 class="section-title">📊 Impacto Institucional 2024</h2>
+    <!-- Sección de resumen estadístico -->
+    <section class="mb-5">
+      <h2 class="stat-section-title">📊 Impacto Institucional 2024</h2>
       <p class="lead" style="color: var(--tertiary-color);">La División de Universidad Abierta, Continua y a Distancia (DUACyD) integra tres áreas fundamentales para la formación permanente en nuestra universidad.</p>
       
       <div class="row g-4 mb-4">
         <div class="col-md-3">
-          <div class="stat-card card h-100">
-            <div class="card-body text-center">
+          <div class="stat-card stat-card h-100">
+            <div class="stat-card-body text-center">
               <div class="stat-number">156</div>
               <div class="stat-label">Programas Académicos</div>
             </div>
           </div>
         </div>
         <div class="col-md-3">
-          <div class="stat-card card h-100">
-            <div class="card-body text-center">
+          <div class="stat-card stat-card h-100">
+            <div class="stat-card-body text-center">
               <div class="stat-number">3,428</div>
               <div class="stat-label">Participantes</div>
             </div>
           </div>
         </div>
         <div class="col-md-3">
-          <div class="stat-card card h-100">
-            <div class="card-body text-center">
+          <div class="stat-card stat-card h-100">
+            <div class="stat-card-body text-center">
               <div class="stat-number">142</div>
               <div class="stat-label">Docentes Colaboradores</div>
             </div>
           </div>
         </div>
         <div class="col-md-3">
-          <div class="stat-card card h-100">
-            <div class="card-body text-center">
+          <div class="stat-card stat-card h-100">
+            <div class="stat-card-body text-center">
               <div class="stat-number">94%</div>
               <div class="stat-label">Satisfacción General</div>
             </div>
@@ -138,13 +271,13 @@
 
     <!-- Section 1: Impacto por áreas -->
     <section class="mb-5">
-      <h2 class="section-title">📈 Impacto por Áreas DUACyD</h2>
+      <h2 class="stat-section-title">📈 Impacto por Áreas DUACyD</h2>
       <p>Nuestra división atiende diferentes necesidades de formación a través de tres áreas especializadas:</p>
       
       <div class="row mb-4">
         <div class="col-md-4">
-          <div class="impact-fact">
-            <div class="impact-icon">🎯</div>
+          <div class="stat-impact-fact">
+            <div class="stat-impact-icon">🎯</div>
             <div>
               <h5>Educación Continua</h5>
               <p class="mb-0">Actualización profesional con enfoque práctico y vinculación laboral.</p>
@@ -152,8 +285,8 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="impact-fact">
-            <div class="impact-icon">🌍</div>
+          <div class="stat-impact-fact">
+            <div class="stat-impact-icon">🌍</div>
             <div>
               <h5>Centro de Lenguas</h5>
               <p class="mb-0">Formación en idiomas para la comunidad universitaria y público general.</p>
@@ -161,8 +294,8 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="impact-fact">
-            <div class="impact-icon">🎓</div>
+          <div class="stat-impact-fact">
+            <div class="stat-impact-icon">🎓</div>
             <div>
               <h5>Universidad Abierta</h5>
               <p class="mb-0">Programas flexibles para adultos con experiencia laboral.</p>
@@ -171,28 +304,28 @@
         </div>
       </div>
       
-      <div class="chart-container">
+      <div class="stat-chart-container">
         <h5>Comparativa de Áreas DUACyD (2024)</h5>
-        <div class="chart" id="chart-areas"></div>
+        <div class="stat-chart" id="chart-areas"></div>
       </div>
     </section>
 
     <!-- Section 2: Crecimiento histórico -->
     <section class="mb-5">
-      <h2 class="section-title">🚀 Trayectoria de Crecimiento</h2>
+      <h2 class="stat-section-title">🚀 Trayectoria de Crecimiento</h2>
       <p>Evolución de los principales indicadores en los últimos 5 años:</p>
       
       <div class="row g-4 mb-4">
         <div class="col-md-6">
-          <div class="chart-container">
+          <div class="stat-chart-container">
             <h5>Participantes por Año</h5>
-            <div class="chart" id="chart-participantes"></div>
+            <div class="stat-chart" id="chart-participantes"></div>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="chart-container">
+          <div class="stat-chart-container">
             <h5>Oferta Educativa por Área</h5>
-            <div class="chart" id="chart-programas"></div>
+            <div class="stat-chart" id="chart-programas"></div>
           </div>
         </div>
       </div>
@@ -204,29 +337,29 @@
 
     <!-- Section 3: Perfil de participantes -->
     <section class="mb-5">
-      <h2 class="section-title">👥 Perfil de Nuestros Participantes</h2>
+      <h2 class="stat-section-title">👥 Perfil de Nuestros Participantes</h2>
       <p>Características demográficas de nuestra comunidad de aprendizaje:</p>
       
       <div class="row g-4">
         <div class="col-md-6">
-          <div class="chart-container">
+          <div class="stat-chart-container">
             <h5>Distribución por Género</h5>
-            <div class="chart" id="chart-genero"></div>
+            <div class="stat-chart" id="chart-genero"></div>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="chart-container">
+          <div class="stat-chart-container">
             <h5>Distribución por Edad</h5>
-            <div class="chart" id="chart-edad"></div>
+            <div class="stat-chart" id="chart-edad"></div>
           </div>
         </div>
       </div>
       
       <div class="row mt-4">
         <div class="col-md-6">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title" style="color: var(--tertiary-color);">Procedencia Académica</h5>
+          <div class="stat-card h-100">
+            <div class="stat-card-body">
+              <h5 class="stat-card-title" style="color: var(--tertiary-color);">Procedencia Académica</h5>
               <div class="progress mb-3" style="height: 25px;">
                 <div class="progress-bar" role="progressbar" style="width: 48%; background-color: var(--primary-color);">Universitaria (48%)</div>
               </div>
@@ -243,25 +376,25 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title" style="color: var(--tertiary-color);">Áreas de Estudio Principales</h5>
+          <div class="stat-card h-100">
+            <div class="stat-card-body">
+              <h5 class="stat-card-title" style="color: var(--tertiary-color);">Áreas de Estudio Principales</h5>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                   Ciencias Sociales
-                  <span class="badge rounded-pill" style="background-color: var(--primary-color);">38%</span>
+                  <span class="stat-badge rounded-pill" style="background-color: var(--primary-color);">38%</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                   Humanidades
-                  <span class="badge rounded-pill" style="background-color: var(--subprimary-color);">25%</span>
+                  <span class="stat-badge rounded-pill" style="background-color: var(--subprimary-color);">25%</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                   Ciencias Exactas
-                  <span class="badge rounded-pill" style="background-color: var(--quaternary-color);">22%</span>
+                  <span class="stat-badge rounded-pill" style="background-color: var(--quaternary-color);">22%</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                   Artes
-                  <span class="badge rounded-pill" style="background-color: var(--important-color); color: #000;">15%</span>
+                  <span class="stat-badge rounded-pill" style="background-color: var(--important-color); color: #000;">15%</span>
                 </li>
               </ul>
             </div>
@@ -272,16 +405,16 @@
 
     <!-- Section 4: Logros institucionales -->
     <section class="mb-5">
-      <h2 class="section-title">🏆 Logros Recientes</h2>
+      <h2 class="stat-section-title">🏆 Logros Recientes</h2>
       <p class="lead" style="color: var(--tertiary-color);">Hitos que reflejan nuestro compromiso con la excelencia académica:</p>
       
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
+          <div class="stat-card h-100 border-0 stat-shadow-sm">
+            <div class="stat-card-body">
               <div class="d-flex align-items-center mb-3">
                 <div style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--subprimary-color) 100%); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                  <i class="fas fa-award text-white"></i>
+                  <i class="stat-fas stat-fa-award text-white"></i>
                 </div>
                 <h5 class="mb-0" style="color: var(--tertiary-color);">Reconocimientos</h5>
               </div>
@@ -290,11 +423,11 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
+          <div class="stat-card h-100 border-0 stat-shadow-sm">
+            <div class="stat-card-body">
               <div class="d-flex align-items-center mb-3">
                 <div style="background: linear-gradient(135deg, var(--important-color) 0%, #ff9a31 100%); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                  <i class="fas fa-handshake text-white"></i>
+                  <i class="stat-fas stat-fa-handshake text-white"></i>
                 </div>
                 <h5 class="mb-0" style="color: var(--tertiary-color);">Vinculación</h5>
               </div>
@@ -303,11 +436,11 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
+          <div class="stat-card h-100 border-0 stat-shadow-sm">
+            <div class="stat-card-body">
               <div class="d-flex align-items-center mb-3">
                 <div style="background: linear-gradient(135deg, var(--accent-color) 0%, #eb6655 100%); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                  <i class="fas fa-chart-line text-white"></i>
+                  <i class="stat-fas stat-fa-chart-line text-white"></i>
                 </div>
                 <h5 class="mb-0" style="color: var(--tertiary-color);">Crecimiento</h5>
               </div>
@@ -320,20 +453,20 @@
 
     <!-- Section 5: Satisfacción y testimonios -->
     <section class="mb-5">
-      <h2 class="section-title">💬 Impacto en Nuestra Comunidad</h2>
+      <h2 class="stat-section-title">💬 Impacto en Nuestra Comunidad</h2>
       <p>La voz de nuestros participantes guía nuestra mejora continua:</p>
       
       <div class="row g-4 mb-4">
         <div class="col-md-6">
-          <div class="chart-container">
+          <div class="stat-chart-container">
             <h5>Indicadores de Calidad</h5>
-            <div class="chart" id="chart-satisfaccion"></div>
+            <div class="stat-chart" id="chart-satisfaccion"></div>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="chart-container">
+          <div class="stat-chart-container">
             <h5>Idiomas más Demandados</h5>
-            <div class="chart" id="chart-lenguas"></div>
+            <div class="stat-chart" id="chart-lenguas"></div>
           </div>
         </div>
       </div>
@@ -341,13 +474,13 @@
       <h4 class="mt-4 mb-3" style="color: var(--tertiary-color);">Testimonios Destacados</h4>
       <div class="row">
         <div class="col-md-6">
-          <div class="testimonial-card">
+          <div class="stat-testimonial-card">
             <p class="mb-2">"El diplomado en Docencia Innovadora transformó completamente mi práctica en el aula. Ahora mis estudiantes están más motivados y los resultados son evidentes."</p>
             <footer class="blockquote-footer mt-2">Mtra. Adriana González, <cite>Facultad de Filosofía y Letras</cite></footer>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="testimonial-card">
+          <div class="stat-testimonial-card">
             <p class="mb-2">"Gracias al Centro de Lenguas pude certificar mi inglés y acceder a una beca de movilidad internacional. Los profesores son excelentes."</p>
             <footer class="blockquote-footer mt-2">José Martínez, <cite>Estudiante de Posgrado</cite></footer>
           </div>
@@ -358,13 +491,13 @@
   </div>
   
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.stat-jsdelivr.stat-net/npm/bootstrap@5.stat-3.stat-0/dist/js/bootstrap.stat-bundle.stat-min.stat-js"></script>
+  <script src="https://cdnjs.stat-cloudflare.stat-com/ajax/libs/d3/5.stat-16.stat-0/d3.stat-min.stat-js"></script>
+  <script src="https://cdnjs.stat-cloudflare.stat-com/ajax/libs/c3/0.stat-7.stat-20/c3.stat-min.stat-js"></script>
+  <script src="https://kit.stat-fontawesome.stat-com/a076d05399.stat-js" crossorigin="anonymous"></script>
   <script>
     // Gráfico de áreas DUACyD
-    var chartAreas = c3.generate({
+    var chartAreas = c3.stat-generate({
       bindto: '#chart-areas',
       data: {
         columns: [
@@ -401,18 +534,18 @@
       },
       bar: {
         width: {
-          ratio: 0.6
+          ratio: 0.stat-6
         }
       }
     });
 
     // Gráfico de participantes históricos
-    var chartParticipantes = c3.generate({
+    var chartParticipantes = c3.stat-generate({
       bindto: '#chart-participantes',
       data: {
         columns: [
           ['Participantes', 1200, 1350, 1580, 2100, 2850, 3428],
-          ['Crecimiento (%)', null, 12.5, 17.0, 32.9, 35.7, 20.3]
+          ['Crecimiento (%)', null, 12.stat-5, 17.stat-0, 32.stat-9, 35.stat-7, 20.stat-3]
         ],
         types: {
           'Participantes': 'area-spline',
@@ -459,7 +592,7 @@
     });
 
     // Gráfico de programas históricos
-    var chartProgramas = c3.generate({
+    var chartProgramas = c3.stat-generate({
       bindto: '#chart-programas',
       data: {
         columns: [
@@ -496,7 +629,7 @@
     });
 
     // Gráfico de género
-    var chartGenero = c3.generate({
+    var chartGenero = c3.stat-generate({
       bindto: '#chart-genero',
       data: {
         columns: [
@@ -519,7 +652,7 @@
     });
 
     // Gráfico de edad
-    var chartEdad = c3.generate({
+    var chartEdad = c3.stat-generate({
       bindto: '#chart-edad',
       data: {
         columns: [
@@ -549,7 +682,7 @@
     });
 
     // Gráfico de satisfacción
-    var chartSatisfaccion = c3.generate({
+    var chartSatisfaccion = c3.stat-generate({
       bindto: '#chart-satisfaccion',
       data: {
         columns: [
@@ -582,13 +715,13 @@
       },
       bar: {
         width: {
-          ratio: 0.5
+          ratio: 0.stat-5
         }
       }
     });
 
     // Gráfico de lenguas
-    var chartLenguas = c3.generate({
+    var chartLenguas = c3.stat-generate({
       bindto: '#chart-lenguas',
       data: {
         columns: [
@@ -616,107 +749,5 @@
       }
     });
   </script>
-
-    <footer class="footer-carbon py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h5>DUACyD FES Aragón</h5>
-                    <p>División de Universidad Abierta, Continua y a Distancia</p>
-                    <p>Facultad de Estudios Superiores Aragón</p>
-                    <p>Universidad Nacional Autónoma de México</p>
-                </div>
-
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h5>Contacto</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><i class="bi bi-geo-alt-fill me-2"></i> Av. Rancho Seco S/N, Col. Impulsora, Nezahualcóyotl,
-                            Estado de México</li>
-                        <li><i class="bi bi-telephone-fill me-2"></i> Teléfono: 55 5623 0000</li>
-                        <li><i class="bi bi-envelope-fill me-2"></i> Email: duacyd@aragon.unam.mx</li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4">
-                    <h5>Síguenos</h5>
-                    <div class="social-icons mb-3">
-                        <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
-                        <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="bi bi-youtube"></i></a>
-                    </div>
-                    <img src="resources/unam_blanco.png" alt="Logo UNAM"
-                        style="height: 60px;" class="me-3">
-                    <img src="resources/fesaragon-blanco.png" alt="Logo FES Aragón"
-                        style="height: 60px;">
-                </div>
-            </div>
-
-            <hr class="my-4 bg-light">
-
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2025 DUACyD FES Aragón - UNAM. Todos los derechos reservados.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="#" class="footer-links">Aviso de Privacidad</a></li>
-                        <li class="list-inline-item"><span class="mx-2">|</span></li>
-                        <li class="list-inline-item"><a href="#" class="footer-links">Términos de Uso</a></li>
-                        <li class="list-inline-item"><span class="mx-2">|</span></li>
-                        <li class="list-inline-item"><a href="creditos.html" class="footer-links">Créditos</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Contenido principal -->
-
-    
-
-    <script>
-        // JavaScript con selectores actualizados
-        document.addEventListener('DOMContentLoaded', function () {
-            const container = document.querySelector('.comp-1-container');
-            if (!container) return;
-
-            const boxes = container.querySelectorAll('.comp-1-box');
-
-            // Verificar si es un dispositivo táctil
-            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
-
-            if (isTouchDevice) {
-                boxes.forEach(box => {
-                    box.addEventListener('click', function (e) {
-                        e.stopPropagation();
-
-                        // Cerrar cualquier caja abierta primero
-                        boxes.forEach(b => {
-                            if (b !== box && b.classList.contains('comp-1-active')) {
-                                b.classList.remove('comp-1-active');
-                            }
-                        });
-
-                        // Alternar la clase active en la caja clickeada
-                        box.classList.toggle('comp-1-active');
-                    });
-                });
-
-                // Cerrar al hacer click fuera de las cajas
-                document.addEventListener('click', function () {
-                    boxes.forEach(box => {
-                        box.classList.remove('comp-1-active');
-                    });
-                });
-            }
-        });
-    </script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 </body>
-
 </html>
