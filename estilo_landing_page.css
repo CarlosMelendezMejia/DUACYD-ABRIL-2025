@@ -78,6 +78,46 @@
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+.navbar-lower {
+    background-color: var(--tertiary-color);
+}
+
+.navbar-lower .nav-link {
+    color: var(--secondary-color) !important;
+    font-size: 0.84rem;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-lower .nav-link:hover {
+    color: var(--important-color) !important;
+}
+
+/* Individual colors for each lower navbar link */
+.nav-link.ec-link {
+    color: #4DA8DA !important;
+}
+
+.nav-link.ec-link:hover {
+    color: #4DA8DA !important;
+}
+
+.nav-link.suayed-link {
+    color: #48b76d !important;
+}
+
+.nav-link.suayed-link:hover {
+    color: #48b76d !important;
+}
+
+.nav-link.lenguas-link {
+    color: #19BB98 !important;
+}
+
+.nav-link.lenguas-link:hover {
+    color: #19BB98 !important;
+}
+
 .footer-carbon {
     background-color: #333333;
     /* Color carbón */
