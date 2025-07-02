@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "nombre": "Diplomado en tecnología",
+        "descripcion": "Programa introductorio a las tecnologías de la información."
+    },
+    {
+        "id": 2,
+        "nombre": "Curso de verano de desarrollo web",
+        "descripcion": "Aprende a crear sitios web con HTML, CSS y JavaScript."
+    }
+]
